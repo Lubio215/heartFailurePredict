@@ -6,6 +6,7 @@
 ## 安装方法
 通过GitHub安装最新版本：
 ```r
+
 # 安装依赖包
 install.packages("remotes")
 # 安装本包
