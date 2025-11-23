@@ -1,7 +1,7 @@
 Package: heartFailurePredict
 Title: Heart Disease Diagnosis Prediction Tool
 Version: 0.1.0
-Authors@R: person(given="Zijie。Lu", family="Lu", role=c("aut","cre"), email="3058317394@qq.com")
+Authors@R: person(given="Zijie.Lu", family="Lu", role=c("aut","cre"), email="3058317394@qq.com")
 Description: A user-friendly R package to predict heart disease diagnosis based on clinical features (e.g., Age, ChestPainType). Trained on heart.csv dataset with random forest model, supporting fast prediction for both batch and single samples.
 License: MIT + file LICENSE
 URL: https://github.com/Lubio215/heartFailurePredict
