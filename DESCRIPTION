@@ -4,8 +4,8 @@ Version: 0.1.0
 Authors@R: person(given="Zijie。Lu", family="Lu", role=c("aut","cre"), email="3058317394@qq.com")
 Description: A user-friendly R package to predict heart disease diagnosis based on clinical features (e.g., Age, ChestPainType). Trained on heart.csv dataset with random forest model, supporting fast prediction for both batch and single samples.
 License: MIT + file LICENSE
-URL: https://github.com/你的GitHub用户名/heartFailurePredict
-BugReports: https://github.com/你的GitHub用户名/heartFailurePredict/issues
+URL: https://github.com/Lubio215/heartFailurePredict
+BugReports: https://github.com/Lubio215/heartFailurePredict/issues
 Imports: caret (>= 6.0-94), randomForest (>= 4.7-1.1), pROC (>= 1.18.0)
 Depends: R (>= 4.0.0)
 Encoding: UTF-8
