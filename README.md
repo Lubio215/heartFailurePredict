@@ -1,2 +1,2 @@
 # heartFailurePredict
-R包：基于随即森林的心脏病诊断预测工具
+R Package: A Heart Disease Diagnosis and Prediction Tool Based on Random Forest
