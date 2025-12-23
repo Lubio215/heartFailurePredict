@@ -1,36 +1,48 @@
-# heartFailurePredict: A Heart Disease Diagnosis Prediction Tool Based on Random Forest
+# heartFailurePredict: A Heart Failure Prediction Tool Based on Random Forest
 
-This is an R package for heart disease diagnosis prediction, built on the random forest algorithm. It can quickly predict the risk of heart disease by inputting patients' clinical features.
+This is an R package for heart failure risk prediction, built on the random forest algorithm. It can quickly predict the risk of heart failure by inputting patients' clinical features, returning classification results (not probabilities) as required.
 
-## Installation Method
-Install the latest version via GitHub:
+## Installation
+Install the latest version from GitHub (requires the `remotes` package):
 ```r
-# Install dependent package
+# Install dependency package
 install.packages("remotes")
-# Install this package
+
+# Install the heartFailurePredict package
 remotes::install_github("Lubio215/heartFailurePredict")
 
 # Load the package
 library(heartFailurePredict)
 
-# Load the built-in dataset (contains patient features and labels)
+#' 1. Load Built-in Dataset
+#' The package includes a built-in dataset `heart_data` with patient clinical features and heart failure labels:
+# Load the dataset
 data(heart_data)
 
-# Extract feature columns (remove the last column of target variable HeartDisease)
-input_features <- heart_data[, -ncol(heart_data)]
+# View dataset structure (confirm feature columns)
+str(heart_data)
 
-# Call the prediction function to get classification results
-prediction <- predict_heart_disease(input_features)
+# Extract feature columns (remove the target variable column: HeartFailure)
+input_features <- heart_data[, -which(colnames(heart_data) == "HeartFailure")]
+
+#' 2. Make Predictions
+#' Use the exported `predict_heart_failure` function to get classification results (NoFailure/Failure):
+# Call the prediction function (input must be a data.frame)
+predictions <- predict_heart_failure(input_features)
 
 # View the first 10 prediction results
-head(prediction, 10)
+head(predictions, 10)
 
-# Count the result distribution (number of patients with/no heart disease)
-table(prediction)
+# Count the distribution of prediction results
+table(predictions)
 
-[1] NoDisease NoDisease NoDisease Disease  NoDisease NoDisease NoDisease NoDisease Disease  NoDisease
-Levels: NoDisease Disease
+#' Example Output
+#' ------------------------------
+# First 10 predictions
+# [1] NoFailure NoFailure NoFailure Failure  NoFailure NoFailure NoFailure NoFailure Failure  NoFailure
+# Levels: NoFailure Failure
 
-prediction
-NoDisease    Disease 
-      412        406 
+# Result distribution
+# predictions
+# NoFailure    Failure 
+#       412        406 
