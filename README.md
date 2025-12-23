@@ -46,3 +46,11 @@ table(predictions)
 # predictions
 # NoFailure    Failure 
 #       412        406 
+
+## Model Performance
+### Key Metrics
+The random forest model achieves the following performance on the test dataset:
+- Accuracy: 0.717 (71.7% correct predictions)
+- Sensitivity (Recall for Failure): 1.00 (100% correct identification of heart failure cases)
+- Precision: 0.653 (65.3% of predicted positive cases are actual positives)
+- AUC (ROC): 0.934 (excellent discriminative ability)
